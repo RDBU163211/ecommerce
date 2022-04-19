@@ -12,13 +12,14 @@ use APP\Http\Controllers\product;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route ::get(/product/register;[productcontroller,"register"])
+
 
 Route::get('/', function () {
+    
     return view('welcome');
 });
-
 Auth::routes();
 
-Route::get(/home, [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::post(/product/register;[productcontroller,"stor"]) 
+Route::post('/home',[app\http\controllers\homecontroller::class,'index'])->name('home');
+Route::get('/product/register',[productcontroller::class, 'register']);
+Route::post('/product.register',[productcontroller::class, 'store']);
