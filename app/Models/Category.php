@@ -12,4 +12,8 @@ class Catagory extends Model
         'name',
 
         ];
+        public function catagory()
+        {
+            return$this->hasMany('Catagory::class')
+        }
 }

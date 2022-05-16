@@ -20,6 +20,9 @@ return new class extends Migration
             $table->string('unit');
             $table->string('price');
             $table->string('quantity');
+            $table->unsignedBigIntejer('catarory-id');
+            $table->foreign('catarory-id')->references('id')->on('catagory')->ondelete('cascade')
+
 
         });
     }
