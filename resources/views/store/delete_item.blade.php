@@ -1,0 +1,1 @@
+stor_keeper register_item
